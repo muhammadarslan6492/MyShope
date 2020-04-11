@@ -167,6 +167,7 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Content\ProductManagerController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -235,6 +236,10 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\ProductManager\Index.cshtml" />
+    <Content Include="Views\ProductManager\Create.cshtml" />
+    <Content Include="Views\ProductManager\Edit.cshtml" />
+    <Content Include="Views\ProductManager\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -251,6 +256,24 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyShope.Core\MyShope.Core.csproj">
+      <Project>{ac56b715-c962-438c-bb18-eeac27a85cea}</Project>
+      <Name>MyShope.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyShope.DataAccess.InMemory\MyShope.DataAccess.InMemory.csproj">
+      <Project>{8db2ac10-7fd6-413d-b834-6a959a5267d4}</Project>
+      <Name>MyShope.DataAccess.InMemory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyShope.DataAccess\MyShope.DataAccess.SQL.csproj">
+      <Project>{2b1c9824-f6c6-40e5-a7c1-999db9a6a93f}</Project>
+      <Name>MyShope.DataAccess.SQL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyShope.Services\MyShope.Services.csproj">
+      <Project>{65ca60dc-3da6-4b84-8fdf-021f5ab8e73a}</Project>
+      <Name>MyShope.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
